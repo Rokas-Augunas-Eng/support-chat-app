@@ -1,5 +1,9 @@
+import { LiveChat } from '@/components/LiveChat';
+
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'></main>
+    <main className='flex min-h-screen flex-col p-24 bg-white text-black'>
+      <LiveChat />
+    </main>
   );
 }
