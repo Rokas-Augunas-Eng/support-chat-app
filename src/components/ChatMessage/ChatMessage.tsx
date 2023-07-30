@@ -15,7 +15,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
   sender,
 }) => {
   const messageClass =
-    sender === SenderType.Own ? 'bg-[#7c7cf1]' : 'bg-[#f17c7c]';
+    sender === SenderType.Own ? 'bg-customPurple' : 'bg-customOrange';
   const messageRef = useRef<HTMLDivElement | null>(null);
   const [isLongMessage, setIsLongMessage] = useState(false);
 
@@ -30,9 +30,14 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
 
   return (
     <div
+      data-testid='chat-message'
+      // TODO: Fix tailwind rendering issue. It doesn't apply justify end or start. Short term fix applied style={{}}.
       className={`flex mb-2 justify-${
         sender === SenderType.Own ? 'end' : 'start'
       }`}
+      style={{
+        justifyContent: `${sender === SenderType.Own ? 'end' : 'start'}`,
+      }}
     >
       <div
         ref={messageRef}

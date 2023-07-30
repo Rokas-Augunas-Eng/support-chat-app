@@ -1,0 +1,19 @@
+{
+  "messages": [
+    {
+      "id": 1,
+      "body": "Hello there",
+      "author": "own"
+    },
+    {
+      "id": 2,
+      "body": "Good morning",
+      "author": "support"
+    },
+    {
+      "id": 3,
+      "body": "How may I be of assistance?",
+      "author": "support"
+    }
+  ]
+}
