@@ -1,34 +1,60 @@
+# Chat-app
+
+## Table of Contents
+
+- General info
+- Setup
+- Results
+- Improvements
+
+## General info
+
+A chat-app, which fecthes data from a local db. User can type into the chat-app, which will update the local db and refetch the information, to be displayed. The app uses Next.js and TypeScript.
+
+## Setup
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+First install dependencies, run the following in the terminal:
 
 ```bash
-npm run dev
-# or
+yarn install
+```
+
+Second, run the development server:
+
+```bash
 yarn dev
-# or
-pnpm dev
+```
+
+To start the server (backend) on http://localhost:8000/messages. Run the following:
+
+```bash
+yarn json-server --watch data/db.json --port 8000
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Results
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Chat message icon will be displayed in the bottomn right corner.
 
-## Learn More
+Closed state
 
-To learn more about Next.js, take a look at the following resources:
+<img width="575" alt="Screenshot 2023-07-30 at 17 41 20" src="https://github.com/Rokas-Augunas-Eng/support-chat-app/assets/78915609/3fb990a5-3d09-4a50-ac13-6b3ef96bd97a">
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open state
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<img width="575" alt="Screenshot 2023-07-30 at 17 41 11" src="https://github.com/Rokas-Augunas-Eng/support-chat-app/assets/78915609/1fcc823f-10e0-4bc3-bed7-770dcc26e5a5">
 
-## Deploy on Vercel
+## Improvements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- More robust test to be written
+- Investigate an issue with Tailwind css rendering
+- Improve scrollToBottom function
+- Timestamps could be added when a message is sent or received
+- Implement message status (sent, delivered, read)
+- Display user presence indicators (e.g., online, offline, typing) to show the status of the other user in the chat.
+- Implement a notification system to alert user of new messages 
