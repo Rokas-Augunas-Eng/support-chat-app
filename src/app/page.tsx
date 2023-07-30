@@ -1,5 +1,14 @@
+import { LiveChat } from '@/components/LiveChat';
+import { ChatContextProvider } from '@/context';
+import { ToastContainer } from 'react-toastify';
+
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'></main>
+    <ChatContextProvider>
+      <main className='flex min-h-screen flex-col p-24 bg-white text-black'>
+        <ToastContainer />
+        <LiveChat />
+      </main>
+    </ChatContextProvider>
   );
 }
